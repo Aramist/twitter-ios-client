@@ -11,7 +11,7 @@
 		8026166A2708C70600105DD9 /* TwitterAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802616692708C70600105DD9 /* TwitterAPICaller.swift */; };
 		80A1F7FE2708B9E30019086A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1F7FD2708B9E30019086A /* AppDelegate.swift */; };
 		80A1F8002708B9E30019086A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1F7FF2708B9E30019086A /* SceneDelegate.swift */; };
-		80A1F8022708B9E30019086A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1F8012708B9E30019086A /* ViewController.swift */; };
+		80A1F8022708B9E30019086A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1F8012708B9E30019086A /* LoginViewController.swift */; };
 		80A1F8052708B9E30019086A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A1F8032708B9E30019086A /* Main.storyboard */; };
 		80A1F8072708B9E40019086A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80A1F8062708B9E40019086A /* Assets.xcassets */; };
 		80A1F80A2708B9E40019086A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A1F8082708B9E40019086A /* LaunchScreen.storyboard */; };
@@ -24,7 +24,7 @@
 		80A1F7FA2708B9E30019086A /* twitter-ios-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "twitter-ios-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A1F7FD2708B9E30019086A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80A1F7FF2708B9E30019086A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		80A1F8012708B9E30019086A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80A1F8012708B9E30019086A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		80A1F8042708B9E30019086A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80A1F8062708B9E40019086A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80A1F8092708B9E40019086A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,16 +74,24 @@
 		80A1F7FC2708B9E30019086A /* twitter-ios-client */ = {
 			isa = PBXGroup;
 			children = (
+				80B17BE62708F2250055B45C /* big-views */,
 				802616692708C70600105DD9 /* TwitterAPICaller.swift */,
 				80A1F7FD2708B9E30019086A /* AppDelegate.swift */,
 				80A1F7FF2708B9E30019086A /* SceneDelegate.swift */,
-				80A1F8012708B9E30019086A /* ViewController.swift */,
 				80A1F8032708B9E30019086A /* Main.storyboard */,
 				80A1F8062708B9E40019086A /* Assets.xcassets */,
 				80A1F8082708B9E40019086A /* LaunchScreen.storyboard */,
 				80A1F80B2708B9E40019086A /* Info.plist */,
 			);
 			path = "twitter-ios-client";
+			sourceTree = "<group>";
+		};
+		80B17BE62708F2250055B45C /* big-views */ = {
+			isa = PBXGroup;
+			children = (
+				80A1F8012708B9E30019086A /* LoginViewController.swift */,
+			);
+			path = "big-views";
 			sourceTree = "<group>";
 		};
 		CE6BFE8671F6123F8E8A3B2F /* Frameworks */ = {
@@ -209,7 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80A1F8022708B9E30019086A /* ViewController.swift in Sources */,
+				80A1F8022708B9E30019086A /* LoginViewController.swift in Sources */,
 				8026166A2708C70600105DD9 /* TwitterAPICaller.swift in Sources */,
 				80A1F7FE2708B9E30019086A /* AppDelegate.swift in Sources */,
 				80A1F8002708B9E30019086A /* SceneDelegate.swift in Sources */,
@@ -362,6 +370,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UTDS9Q6KAY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "twitter-ios-client/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Twitter Client";
@@ -392,6 +401,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UTDS9Q6KAY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "twitter-ios-client/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Twitter Client";
