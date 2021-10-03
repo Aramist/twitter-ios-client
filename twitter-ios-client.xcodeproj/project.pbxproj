@@ -15,6 +15,8 @@
 		80A1F8052708B9E30019086A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A1F8032708B9E30019086A /* Main.storyboard */; };
 		80A1F8072708B9E40019086A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80A1F8062708B9E40019086A /* Assets.xcassets */; };
 		80A1F80A2708B9E40019086A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A1F8082708B9E40019086A /* LaunchScreen.storyboard */; };
+		80B17BE8270A29FE0055B45C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B17BE7270A29FE0055B45C /* HomePageViewController.swift */; };
+		80B17BED270A3E050055B45C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B17BEC270A3E050055B45C /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		80A1F8062708B9E40019086A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80A1F8092708B9E40019086A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80A1F80B2708B9E40019086A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B17BE7270A29FE0055B45C /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		80B17BE9270A2E190055B45C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		80B17BEC270A3E050055B45C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		836709A2BC5771375F89253B /* Pods-twitter-ios-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter-ios-client.release.xcconfig"; path = "Target Support Files/Pods-twitter-ios-client/Pods-twitter-ios-client.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +87,8 @@
 				80A1F8062708B9E40019086A /* Assets.xcassets */,
 				80A1F8082708B9E40019086A /* LaunchScreen.storyboard */,
 				80A1F80B2708B9E40019086A /* Info.plist */,
+				80B17BE9270A2E190055B45C /* Config.xcconfig */,
+				80B17BEC270A3E050055B45C /* Colors.swift */,
 			);
 			path = "twitter-ios-client";
 			sourceTree = "<group>";
@@ -90,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				80A1F8012708B9E30019086A /* LoginViewController.swift */,
+				80B17BE7270A29FE0055B45C /* HomePageViewController.swift */,
 			);
 			path = "big-views";
 			sourceTree = "<group>";
@@ -219,7 +227,9 @@
 			files = (
 				80A1F8022708B9E30019086A /* LoginViewController.swift in Sources */,
 				8026166A2708C70600105DD9 /* TwitterAPICaller.swift in Sources */,
+				80B17BED270A3E050055B45C /* Colors.swift in Sources */,
 				80A1F7FE2708B9E30019086A /* AppDelegate.swift in Sources */,
+				80B17BE8270A29FE0055B45C /* HomePageViewController.swift in Sources */,
 				80A1F8002708B9E30019086A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +258,7 @@
 /* Begin XCBuildConfiguration section */
 		80A1F80C2708B9E40019086A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80B17BE9270A2E190055B45C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -309,6 +320,7 @@
 		};
 		80A1F80D2708B9E40019086A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80B17BE9270A2E190055B45C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -370,6 +382,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = UTDS9Q6KAY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "twitter-ios-client/Info.plist";
@@ -401,6 +414,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = UTDS9Q6KAY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "twitter-ios-client/Info.plist";

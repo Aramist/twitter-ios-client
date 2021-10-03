@@ -1,49 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@Aramist
-github /
-gitignore
-Public
-
-3.2k
-124k
-
-    69.3k
-
-Code
-Pull requests 324
-Actions
-Security
-
-    Insights
-
-gitignore/Swift.gitignore
-@Coeur
-Coeur Improving the documentation of Objective-C and Swift files (#3133)
-Latest commit e00d43a on Aug 7, 2019
-History
-22 contributors
-@KrauseFx
-@Coeur
-@shiftkey
-@juliancadi
-@fidmor89
-@FabrizioBrancati
-@adrfer
-@nwest
-@nrbrook
-@natestedman
-@martinblech
-@yanniks
-90 lines (74 sloc) 2.12 KB
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
 ## User settings
 xcuserdata/
 
@@ -130,19 +84,5 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-
-    © 2021 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
+*.xcconfig
 

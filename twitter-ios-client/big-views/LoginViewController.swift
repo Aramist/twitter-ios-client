@@ -20,11 +20,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabelConfiningView: UIView!
     
     
-    
-    let blueColor = UIColor(red: 29.0/255.0, green: 161.0/255.0, blue: 242.0/255.0, alpha: 1.0)
-    let whiteColor = UIColor(red: 230.0/255.0, green: 243.0/255.0, blue: 236.0/255.0, alpha: 1.0)
-    let blackColor = UIColor(red: 10.0/255.0, green: 9.0/255.0, blue: 12.0/255.0, alpha: 1.0)
-    let errorColor = UIColor(red: 201.0/255.0, green: 44.0/255.0, blue: 75.0/255.0, alpha: 1.0)
+    var authToken: String? = nil
     
     
     override func viewDidLoad() {
@@ -34,19 +30,19 @@ class LoginViewController: UIViewController {
     
     
     func artisticTouches() {
-        self.view.backgroundColor = whiteColor
-        self.loginBox.backgroundColor = blueColor
+        self.view.backgroundColor = Colors.whiteColor
+        self.loginBox.backgroundColor = Colors.blueColor
         self.loginBox.layer.cornerRadius = 15.0
         
-        self.errorLabel.textColor = errorColor
+        self.errorLabel.textColor = Colors.errorColor
         self.errorLabel.lineBreakMode = .byWordWrapping
         self.errorLabel.numberOfLines = 0
         self.errorLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         self.hideErrorLabel()
         
-        self.emailField.textColor = blackColor
+        self.emailField.textColor = Colors.blackColor
         self.emailField.textContentType = .emailAddress
-        self.passwordField.textColor = blackColor
+        self.passwordField.textColor = Colors.blackColor
         self.passwordField.textContentType = .password
         self.passwordField.isSecureTextEntry = true
         
@@ -54,7 +50,7 @@ class LoginViewController: UIViewController {
         config.title = "Login"
         config.titleAlignment = .leading
         config.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0)
-        config.baseForegroundColor = whiteColor
+        config.baseForegroundColor = Colors.whiteColor
         self.submitButton.configuration = config
     }
     
@@ -81,9 +77,13 @@ class LoginViewController: UIViewController {
             return
         }
 
-        
-        print(email)
-        print(password)
+        let apiClient = TwitterAPICaller.client
+        let reqURL = "https://api.twitter.com/oauth/request_token"
+//        apiClient?.login(url: reqURL, success: {
+        self.performSegue(withIdentifier: "loginToHomepage", sender: self)
+//        }, failure: { (Error) in
+//            self.presentError("Failed to login with given email and password.")
+//        })
     }
     
     
@@ -115,6 +115,24 @@ class LoginViewController: UIViewController {
         return email.range(of: pattern, options: .regularExpression) != nil
     }
     
+    
+    // MARK: Navigation
+    
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        // Always disallow user-prompted segue from login to homepage
+//        // It will be initiated programmatically when the credentials are verified
+//        if identifier == "loginToHomepage"{
+//            return false;
+//        }
+//        return true;
+//    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // TODO: send data
+//        if segue.identifier == "loginToHomepage" {}
+//    }
+    
+    // MARK: IB Extensions
     
     @IBAction func loginButtonHandler(_ sender: Any) {
         self.handleLogin()
