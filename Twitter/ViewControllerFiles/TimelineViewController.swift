@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class TimelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TimelineViewController: UIViewController {
     
     @IBOutlet weak var tweetTable: UITableView!
     @IBOutlet weak var logoutButton: UIBarButtonItem!
@@ -88,6 +88,11 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
         return self.tweetCache.count
     }
     
+    
+}
+
+extension TimelineViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell") as? TweetTableViewCell {
             // Stylistic things first
@@ -115,4 +120,9 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
             self.loadAdditionalTweets()
         }
     }
+
+}
+
+extension TimelineViewController: UITableViewDelegate {
+    
 }
