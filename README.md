@@ -1,4 +1,4 @@
-# Project 3 - *Name of App Here*
+# Project 3 - Tweeter
 
 Tweeter is a basic twitter app to read your tweets.
 
@@ -23,4 +23,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![demonstration](https://github.com/Aramist/twitter-ios-client/raw/main/demo.gif)
+<img src="https://github.com/Aramist/twitter-ios-client/blob/main/demo.gif" width=250><br>
