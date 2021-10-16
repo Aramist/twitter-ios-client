@@ -55,8 +55,8 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
             failure(error)
         })
     }
-
-    func postRequest(url: String, parameters: [Any], success: @escaping () -> (), failure: @escaping (Error) -> ()){
+    
+    func postRequest(url: String, parameters: [String:Any], success: @escaping () -> (), failure: @escaping (Error) -> ()){
         TwitterAPICaller.client?.post(url, parameters: parameters, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
             success()
         }, failure: { (task: URLSessionDataTask?, error: Error) in
